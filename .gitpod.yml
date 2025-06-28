@@ -1,0 +1,6 @@
+image: maven:3.8.1-openjdk-17
+
+tasks:
+  - name: Run Tests
+    init: mvn clean install
+    command: mvn test

@@ -1,0 +1,147 @@
+version: "0.1"
+user: mehedi159021
+key: LT_97mF0c0AmO9VkxtMeb0PrEyFvCLnikm0ZISo5Rh5s9Wy06r
+testSuites: []
+pre: [npm install playwright@1.23.0 --save-exact, mvn -Dmaven.repo.local=m2_cache_dir -Dmaven.test.skip=true clean install]
+preDirectives:
+    commands: [npm install playwright@1.23.0 --save-exact, mvn -Dmaven.repo.local=m2_cache_dir -Dmaven.test.skip=true clean install]
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+post: ['mvn allure:report']
+postDirectives:
+    commands: ['mvn allure:report']
+    shell: ""
+    workingDirectory: ""
+env:
+    BASE_URL: https://www.lambdatest.com/selenium-playground
+runson: linux
+concurrency: 2
+testRunnerCommand: mvn test
+globalTimeout: 150
+tunnelOpts:
+    testsPerTunnel: 10
+testSuiteTimeout: 150
+testSuiteStep: 150
+cacheDirectories:
+    - m2_cache_dir
+cacheKey: '{{ checksum "pom.xml" }}'
+shell: bash
+jobID: b37912af-64e0-4b6a-88fa-9d639a063bf4
+codeDirectory: LamdatestPlaywright102Assignment
+framework:
+    name: ""
+    flags: []
+    discoveryFlags: []
+    discoveryMode: ""
+    discoveryType: ""
+    runnerFlags: []
+    workingDirectory: ""
+    isTestNGXMLSuite: false
+    defaultReports: false
+    args:
+        appPath: ""
+        testSuitePath: ""
+        xcTestPlanPath: ""
+        shards:
+            mappings: []
+        filters:
+            attributes: []
+        devices: []
+        deviceSelectionStrategy: ""
+        appId: ""
+        testSuiteAppId: ""
+        xcTestPlanId: ""
+        skipXMLOnRun: false
+        skipInstall: false
+        disableReleaseDevice: false
+        platformName: ""
+        isRealMobile: null
+        avoidAppLaunch: false
+        queueTimeout: 0
+        uninstallPreviousBuild: false
+        language: ""
+        locale: ""
+        preservedDevice: false
+        fixedIP: ""
+        resignApp: true
+        minorOsVersion: false
+        playwrightRD: false
+        mobileDC: null
+        skipUninstallPreviousBuild: false
+        isVirtualDevice: false
+        mitmProxy: false
+        networkHar: false
+        artifacts: false
+        otherApps: []
+        customData: {}
+        smartUI: null
+    additional_args: null
+    licenseKey: ""
+    userdefinediscovery: false
+    toscaArgs: null
+    version: ""
+    downloadURL: ""
+    baseCommand: ""
+cypress: false
+betaFeature:
+    setPartiallyCompletedAsCompleted: false
+testType: playwright
+triggerSource: CLI
+combineTasksInMatrixMode: false
+captureScreenRecordingForScenarios: false
+maxRetriesPreSteps: 0
+triggerMode: false
+sourcePayload:
+    verifySSL: true
+collectLocalGitData: true
+dynamicAllocation: false
+appium: null
+platformConfig: null
+differentialUpload:
+    enabled: false
+    ttlHours: null
+    forcedDisabled: false
+project:
+    id: ""
+    name: ""
+    type: custom
+meta: {}
+alwaysRunPostSteps: false
+errorCategorizedOnFailureOnly: false
+testDiscoveryResultV3: []
+storageType: ""
+localHTTPProxy: ""
+regionConfig:
+    vm: []
+    storage:
+        region: ""
+        enabled: false
+        name: ""
+        platform: azure
+waitForArtefactsUpload: false
+unzipPayload: false
+projectpath: ""
+accessibilityJob: false
+globalPre:
+    mode: ""
+    commands: []
+    maxRetries: 0
+    shell: ""
+    workingDirectory: ""
+    completed: false
+    runson: ""
+    cache: false
+    yamlPath: null
+    type: ""
+    location: ""
+globalPost:
+    mode: ""
+    commands: []
+    shell: ""
+    workingDirectory: ""
+    completed: false
+    runson: ""
+slackChannel: ""
+whiteLabelProductTag: ""
+sprofilePath: ""

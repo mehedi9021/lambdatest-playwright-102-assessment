@@ -1,0 +1,30 @@
+version: 0.1
+
+globalTimeout: 900
+testSuiteTimeout: 900
+testSuiteStep: 500
+
+runson: linux
+shell: bash
+
+concurrency: 2
+
+env:
+  BASE_URL: https://www.lambdatest.com/selenium-playground
+
+cacheKey: '{{ checksum "pom.xml" }}'
+cacheDirectories:
+  - m2_cache_dir
+
+pre:
+  - npm install playwright@1.23.0 --save-exact
+  - mvn -Dmaven.repo.local=m2_cache_dir -Dmaven.test.skip=true clean install
+
+post:
+  - mvn allure:report
+
+testRunnerCommand: mvn test
+
+secrets:
+  LT_USERNAME: ${LT_USERNAME}
+  LT_ACCESS_KEY: ${LT_ACCESS_KEY}
