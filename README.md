@@ -1,4 +1,4 @@
-# LambdaTest Playwright 102 Assignment
+# lambdatest-playwright-102-assignment
 
 ## How to Run on Gitpod
 
