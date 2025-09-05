@@ -1,4 +1,4 @@
-# lambdatest-playwright-102-assignment
+# lambdatest-playwright-102-assessment
 
 ## How to Run on Gitpod
 
